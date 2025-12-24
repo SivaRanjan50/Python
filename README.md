@@ -16,7 +16,7 @@ Useful Libraries**
 ```
 
 ### Variables & Assignment
-```
+```Python
 Definition: Variables store data values. Python is dynamically typed (no need to declare type)
 
 # Variable assignment
@@ -38,7 +38,7 @@ variable = "Hello"       # Now it's a string
 ```
 
 ### Input/Output
-```
+```Python
 Definition: print() displays output, input() reads user input as string.
 
 # Output
@@ -55,7 +55,7 @@ age = int(input("Enter age: "))         # Convert to int
 ```
 
 ### Basic Operators
-```
+```Python
 Definition: Operators perform operations on variables and values.
 
 # Arithmetic operators
@@ -91,7 +91,7 @@ x not in y # True if x not found in y
 ```
 ## 📊 DATA TYPES
 ### Numeric Types
-```
+```Python
 Definition: Numeric types store numbers. Python supports int, float, and complex numbers.
 
 # Integers (int)
@@ -122,7 +122,7 @@ isinstance(x, int)   # True
 ```
 
 ### Strings
-```
+```Python
 Definition: Strings store text as sequence of Unicode characters. Immutable.
 
 # String creation
@@ -160,7 +160,7 @@ f"Name: {name}, Age: {age}"          # f-string
 "Name: {}, Age: {}".format(name, age) # format()
 ```
 ### Booleans
-```
+```Python
 Definition: Booleans represent truth values: True or False. Used in conditions.
 
 # Boolean values
@@ -183,7 +183,7 @@ bool(None)        # False
 ```
 
 ### None Type
-```
+```Python
 Definition: None is a special constant representing the absence of a value.
 
 # None represents absence of value
@@ -200,7 +200,7 @@ result = function()  # result is None
 
 ##  CONTROL FLOW
 ### Conditional Statements (if/elif/else)
-```
+```Python
 Definition: Conditional statements execute code based on boolean conditions.
 
 # Basic if statement
@@ -236,7 +236,7 @@ if x > 0 and x < 10:  # Equivalent
 ```
 
 ### Loops
-```
+```Python
 Definition: Loops repeat code execution. for loops iterate over sequences, while loops repeat while condition is true.
 
 # For loop
@@ -282,8 +282,7 @@ for name, age in zip(names, ages):
 ```
 
 ### Range Function
-
-```
+```Python
 Definition: range() generates sequence of numbers, efficient for memory.
 
 range(5)            # 0, 1, 2, 3, 4
@@ -297,7 +296,7 @@ list(range(5))      # [0, 1, 2, 3, 4]
 
 ## FUNCTIONS
 ### Defining Functions
-```
+```Python
 Definition: Functions are reusable blocks of code that perform specific tasks.
 
 # Basic function
@@ -326,7 +325,7 @@ def add(a: int, b: int) -> int:
 ```
 
 ### Arguments & Parameters
-```
+```Python
 Definition: Functions can accept different types of arguments for flexibility.
 
 # Positional arguments
@@ -360,7 +359,7 @@ def complex_func(a, b, *args, c=10, **kwargs):
 ```
 
 ### Lambda Functions
-```
+```Python
 Definition: Lambda functions are anonymous, single-expression functions.
 
 # Anonymous function
@@ -377,7 +376,7 @@ evens = list(filter(lambda x: x % 2 == 0, numbers))  # [2, 4]
 ```
 
 ### Decorators
-```
+```Python
 Definition: Decorators modify or enhance functions without changing their code.
 
 # Basic decorator
@@ -415,7 +414,7 @@ def greet(name):
 
 ## 📦 DATA STRUCTURES
 ### Lists
-```
+```Python
 Definition: Lists are ordered, mutable collections that can contain different data types.
 
 # List creation
@@ -459,7 +458,7 @@ pairs = [(x, y) for x in [1, 2] for y in [3, 4]]  # [(1,3), (1,4), (2,3), (2,4)]
 ```
 
 ### Tuples
-```
+```Python
 Definition: Tuples are ordered, immutable collections. Faster than lists, used for fixed data.
 
 # Tuple creation
@@ -490,7 +489,7 @@ x, y = get_coordinates()
 ```
 
 ### Sets
-```
+```Python
 Definition: Sets are unordered collections of unique elements. Useful for membership testing and mathematical operations.
 
 # Set creation
@@ -526,7 +525,7 @@ squares = {x**2 for x in range(5)}  # {0, 1, 4, 9, 16}
 ```
 
 ### Dictionaries
-```
+```Python
 Definition: Dictionaries store key-value pairs. Keys must be immutable (strings, numbers, tuples), values can be any type.
 
 # Dictionary creation
@@ -562,7 +561,7 @@ squares = {x: x**2 for x in range(5)}  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 even_squares = {x: x**2 for x in range(10) if x % 2 == 0}
 ```
 ### Collections Module
-```
+```Python
 Definition: The collections module provides specialized container datatypes.
 
 from collections import defaultdict, Counter, deque, namedtuple
@@ -593,7 +592,7 @@ p.y                           # 20
 
 ## 🏗️ OBJECT-ORIENTED PROGRAMMING
 ### Classes & Objects
-```
+```Python
 Definition: Classes are blueprints for creating objects (instances). Objects bundle data and methods.
 
 # Basic class
@@ -627,7 +626,7 @@ Dog.species                   # "Canis familiaris"
 ```
 
 ### Inheritance
-```
+```Python
 Definition: Inheritance allows creating new classes that reuse, extend, or modify behavior of existing classes.
 
 # Parent class
@@ -665,7 +664,7 @@ class C(A, B):  # Inherits from both A and B
 ```
 
 ### Special Methods (Dunder/Magic Methods)
-```
+```Python
 Definition: Special methods (dunder methods) allow customizing behavior of objects for operations like +, *, len(), etc.
 
 class Vector:
@@ -715,7 +714,7 @@ v1[0]               # Calls __getitem__
 ```
 
 ### Properties & Descriptors
-```
+```Python
 Definition: Properties allow controlled access to attributes with getter, setter, and deleter methods.
 
 class Person:
@@ -749,7 +748,7 @@ del person.name                 # Uses deleter
 
 ##  ERROR HANDLING
 ### Try/Except Blocks
-```
+```Python
 Definition: Try-except blocks handle runtime errors gracefully without crashing the program
 
 # Basic try-except
@@ -795,7 +794,7 @@ finally:
 
 ## 📁 FILE OPERATIONS
 ### Reading Files
-```
+```Python
 # Read entire file
 with open("file.txt", "r") as f:
     content = f.read()          # Entire file as string
@@ -815,7 +814,7 @@ with open("file.txt", "r", encoding="utf-8") as f:
 ```
 
 ### Writing Files
-```
+```Python
 # Write to file (overwrites)
 with open("output.txt", "w") as f:
     f.write("Hello, World!\n")
@@ -832,7 +831,7 @@ with open("output.txt", "w") as f:
 ```
 
 ### File Modes
-```
+```Python
 "r"     # Read (default)
 "w"     # Write (truncates)
 "x"     # Exclusive creation (fails if exists)
@@ -852,7 +851,7 @@ File operations allow reading from and writing to files. Use with statement for 
 ```
 
 ### Working with Paths
-```
+```Python
 Definition: pathlib provides object-oriented filesystem paths.
 
 from pathlib import Path  # Modern approach (Python 3.4+)
@@ -885,7 +884,7 @@ list(Path(".").glob("**/*.py"))       # Recursive
 
 ## 📦 MODULES & PACKAGES
 ### Importing Modules
-```
+```Python
 Definition: Modules are Python files containing code. Packages are directories containing modules.
 
 # Import entire module
@@ -912,7 +911,7 @@ from .. import module_in_parent_package
 ```
 
 ### Creating Modules & Packages
-```
+```Python
 Definition: __name__ == "__main__" allows code to run when file is executed directly, not when imported.
 
 """
@@ -947,7 +946,7 @@ my_package/
 ```
 
 ### Virtual Environments
-```
+```Python
 Definition: Virtual environments isolate project dependencies.
 
 # Create virtual environment
@@ -977,7 +976,7 @@ pip freeze > requirements.txt
 
 ## 🚀 ADVANCED CONCEPTS
 ### Generators
-```
+```Python
 Definition: Generators produce values lazily (one at a time), saving memory.
 # Generator function
 def count_up_to(max):
@@ -1004,7 +1003,7 @@ def infinite_sequence():
         num += 1
 ```
 ### Context Managers
-```
+```Python
 Definition: Context managers handle setup and teardown of resources (files, locks, connections).
 
 # Using with statement
@@ -1032,7 +1031,7 @@ with timer():
 ```
 
 ### Decorators (Advanced)
-```
+```Python
 # Decorator with arguments
 def repeat(n):
     def decorator(func):
@@ -1064,7 +1063,7 @@ obj.new_method()  # "New method"
 
 ## 📚 USEFUL LIBRARIES
 ### Built-in Modules
-```
+```Python
 # math - Mathematical functions
 import math
 math.sqrt(16), math.pi, math.sin(math.radians(30))
@@ -1111,7 +1110,7 @@ from typing import List, Dict, Optional, Union
 ```
 
 ### Popular Third-party Libraries
-```
+```Python
 """
 Data Science & Analytics:
 - numpy: Numerical computing
@@ -1147,7 +1146,7 @@ Database:
 
 ## QUICK REFERENCE
 ### Common Patterns
-```
+```Python
 # List comprehension
 [x**2 for x in range(10) if x % 2 == 0]
 
@@ -1177,34 +1176,8 @@ for i, value in enumerate(["a", "b", "c"]):
 for a, b in zip([1, 2, 3], ["a", "b", "c"]):
     print(a, b)
 ```
-```
-Term	                Definition
-Python	              High-level, interpreted programming language
-Variable	            Named reference to a value
-Data Type	            Classification of data (int, str, list, etc.)
-Immutable	            Cannot be changed after creation (str, tuple)
-Mutable	              Can be changed after creation (list, dict)
-Function	            Reusable block of code
-Method	              Function associated with an object
-Class	                Blueprint for creating objects
-Object	              Instance of a class
-Module	              Python file containing code
-Package	              Directory containing modules
-Import	              Bring code from module/package into current scope
-Exception	            Runtime error that can be caught and handled
-Iterable	            Object that can return its elements one at a time
-Iterator	            Object with next() method
-Generator	            Function that yields values lazily
-Decorator	            Function that modifies another function
-Context Manager	      Object with enter() and exit() methods
-Lambda	              Anonymous, single-expression function
-List Comprehension	  Compact way to create lists
-Dunder Methods	      Special methods with double underscores
-PEP	                  Python Enhancement Proposal (standards)
-Virtual Environment	  Isolated Python environment
-```
 
-```
+```Python
 Python - A high-level, interpreted programming language known for its readability and simplicity.
 
 Variable - A named reference or container that stores a value in memory.

@@ -150,6 +150,7 @@ print(reverse_string("hello"))  # Output: "olleh"
 ```python
 ## A palindromic number is a number that remains the same when its digits are reversed.
 ## This means it has reflectional symmetry across a vertical axis.
+## 12321 is palindrom (121,131,141, like...)
 
 def is_palindrome(s):
     s = s.replace(" ", "").lower()
@@ -249,6 +250,16 @@ def flatten(lst):
     return [item for sublist in lst for item in sublist]
 
 print(flatten([[1, 2], [3, 4], [5]]))  # Output: [1, 2, 3, 4, 5]
+
+        or
+
+def rec_lst(lst):
+    res=[]
+    for sublist in lst:
+        for item in sublist:
+            res.append(item)
+    return res
+rec_lst([[1, 2], [3, 4], [5]])
 ```
 
 
@@ -261,6 +272,29 @@ def remove_duplicates(lst):
     return [x for x in lst if not (x in seen or seen.add(x))]
 
 print(remove_duplicates([1, 2, 2, 3, 1, 4]))  # Output: [1, 2, 3, 4]
+
+            or
+
+def rem_dup(lst):
+    seen =set()
+    result = []
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+rem_dup([1,2,3,4,5,3,4,1])
+
+# lst = [1,2,3,4,5,3,4,1]
+# seen = set() -- create an empty set to track seen elements
+# result = [] -- create an empty list to store unique elements
+# for item in lst:
+# if item not in seen
+# we add item to seen set and append it to result list
+# seen.add(item)
+# we append item to result list
+# result.append(item)
+
 ```
 
 ### 12. Merge Two Dictionaries
@@ -268,7 +302,7 @@ print(remove_duplicates([1, 2, 2, 3, 1, 4]))  # Output: [1, 2, 3, 4]
 #### Q: Merge two dictionaries into one.
 ```python
 def merge_dicts(d1, d2):
-    return {**d1, **d2}
+    return {**d1, **d2} // unpacking with multiple dictionaries
 
 print(merge_dicts({'a': 1}, {'b': 2}))  # Output: {'a': 1, 'b': 2}
 ```

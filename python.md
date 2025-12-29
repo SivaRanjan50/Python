@@ -148,6 +148,9 @@ print(reverse_string("hello"))  # Output: "olleh"
 #### Q: Check if a string is a palindrome (ignoring spaces & case).  
 
 ```python
+## A palindromic number is a number that remains the same when its digits are reversed.
+## This means it has reflectional symmetry across a vertical axis.
+
 def is_palindrome(s):
     s = s.replace(" ", "").lower()
     return s == s[::-1]
